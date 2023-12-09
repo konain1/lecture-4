@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 600px;
+            width: 100%;
+            background-color: yellow;
+            border: 1px solid;
+        }
+        .ball2{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: 1px solid;
+            background-color: rgb(212, 199, 199);
+            animation-name: ball2;
+            position: relative;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+            animation-timing-function: linear;
+        }
+        .ball{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: 1px solid;
+            background-color: black;
+            margin-left: 250px;
+            animation-name:blackball;
+            position: relative;
+            animation-duration: 9s;
+            animation-iteration-count :infinite;
+            animation-direction:alternate;
+            animation-timing-function:ease-in;
+            animation-play-state: running;
+
+        }
+
+        @keyframes ball2 {
+
+            0%{
+                top: 0px;
+                left: 10px;
+            }
+            10%{
+                top: 30px;
+               
+                left: 200px;
+            }
+            20%{
+                top: 50px;
+                left: 250px;
+            }
+
+            50%{
+                top: 0px;
+                left: 300px;
+            }
+            75%{
+                top: 10px;
+
+                left: 20px;
+            }
+
+            100%{
+                top: 0px;
+                left: 10px;
+            }
+            
+        }
+
+        @keyframes blackball{
+            from{
+                top: 0px;
+            }
+            to{
+                top: 550px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="ball"></div>
+        <div class="ball2"></div>
+    </div>
+</body>
+</html>
