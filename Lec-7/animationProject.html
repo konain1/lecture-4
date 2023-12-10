@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: rgb(202, 186, 186);
+            height: 100vh;
+            position: relative;
+            animation-name: daynight;
+            animation-duration: 120s;
+            overflow: hidden;
+        }
+        .day{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            animation-name: dayshift;
+            animation-duration: 100s;
+            animation-timing-function: linear;
+            left: -100px;
+            
+        }
+        .night{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            right: -110px;
+            top: 0px;
+            animation-name: nightshift;
+            animation-delay: 15s;
+            animation-duration: 120s;
+            animation-timing-function: linear;
+
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .buttons{
+            position: absolute;
+            left: 45%;
+            top: 40%;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            border: none;
+            color: red;
+            background-color: unset;
+            outline: 1px solid green;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: rgba(148, 109, 109, 0.24) 0px 3px 8px;
+        }
+        button:hover{
+            transform: scale(1.2);
+            color: green;
+        }
+        .birds{
+            width: 30%;
+            height: 40%;
+            animation-name: birds;
+            position: absolute;
+            animation-duration: 50s;
+            animation-delay: 2s;
+        }
+        .mountain{
+            width: 100%;
+            height: 550px;
+            position: absolute;
+            bottom: -140px;
+            left:130px;
+        }
+        .mountain img{
+            width: 30%;
+        }
+        @keyframes dayshift {
+            0%{
+                top: 0px;
+                left: -50px;
+
+            }
+            2%{
+                top: 10px;
+                left: 10px;
+            }
+            3%{
+                top: 30px;
+                left: 30px;
+            }
+            5%{
+                top: 50px;
+                left: 150px;
+            }
+
+            10%{
+                top: 110px;
+                left: 300px;
+            }
+            25%{
+                top: 150px;
+                left: 400px;
+            }
+            50%{
+                top: 500px;
+                left: 800px;
+            }
+            100%{
+                top: 800px;
+                left: 1100px;
+            }
+        }
+        @keyframes birds {
+            
+            0%{
+                top:30px
+            }
+            25%{
+                top:40px;
+                left: 30px;
+            }
+            50%{
+                top: 40px;
+                left: 70px;
+            }
+            75%{
+                top: 45px;
+                left: 500px;
+            }
+            100%{
+                top: 40px;
+                left: 800px;
+            }
+        }
+        @keyframes daynight {
+            0%{
+               background-color: whitesmoke;
+            }
+            2%{
+                background-color: rgb(219, 214, 214);
+            }
+            3%{
+                background-color: rgb(186, 182, 182);
+
+            }
+            5%{
+                background-color: rgb(178, 169, 169);
+
+            }
+
+            10%{
+                background-color: rgb(143, 136, 136);
+
+            }
+            25%{
+                background-color: rgb(188, 181, 181);
+
+            }
+            50%{
+                background-color: rgb(99, 94, 94);
+
+            }
+            100%{
+                background-color: rgb(63, 58, 58);
+
+            }
+        }
+        @keyframes nightshift {
+            0%{
+                top: 0px;
+
+            }
+            2%{
+                top: 10px;
+                right: 10px;
+            }
+            3%{
+                top: 10px;
+                right: 30px;
+            }
+            5%{
+                top: 20px;
+                right: 150px;
+            }
+
+            10%{
+                top: 30px;
+                right: 300px;
+            }
+            25%{
+                top: 50px;
+                right: 400px;
+            }
+            50%{
+                top: 100px;
+                right: 800px;
+            }
+            100%{
+                top: 120px;
+                right: 1100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="day">
+            <img src="sun.png" alt="">
+        </div>
+        <div class="night">
+            <img src="moon.png" alt="">
+        </div>
+        <!-- <div class="buttons">
+            <button class="on">Day</button>
+            <button class="off">Night</button>
+        </div> -->
+        <div class="birds">
+            <img src="birds.png" alt="">
+        </div>
+        <div class="mountain">
+            <img src="mountain.png" alt="">
+             <img src="mountain.png" alt="">
+
+            <img src="mountain.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
